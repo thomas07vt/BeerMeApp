@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_syncDB"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:layout_width="fill_parent"
+        android:title="@string/action_SyncDB">
+    </item>
+    
+    <item
+        android:id="@+id/action_Emailsettings"
+        android:orderInCategory="101"
+        android:showAsAction="never"
+        android:layout_width="fill_parent"
+        android:title="@string/action_Emailsettings">
+    </item>
+    
+    <item 
+        android:id="@+id/action_UploadDrinkImages" 
+        android:orderInCategory="102" 
+        android:showAsAction="never"
+        android:layout_width="fill_parent"
+        android:title="@string/action_UploadDrinkImages">
+    </item>
+    
+    <item 
+        android:id="@+id/action_AdminPanel" 
+        android:orderInCategory="103" 
+        android:showAsAction="never"
+        android:layout_width="fill_parent"
+        android:title="@string/action_AdminPanel">
+    </item>
+
+</menu>

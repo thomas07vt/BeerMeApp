@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/DrinkInfoActivityView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Spinner
+        android:id="@+id/spnDrinkInfo"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:entries="@array/DrinkPosition" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/imgActiveDrinkImage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/taptoupdate" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".50"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/txtDrinkName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/txtLastDispensed"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:text="@string/drink_Name" />
+
+                <TextView
+                    android:id="@+id/lblDrinkName"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/text_Drink_Name" />
+
+                <TextView
+                    android:id="@+id/lblDrinkCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/txtDrinkName"
+                    android:text="@string/text_cans_Left" />
+
+               <EditText
+                    android:id="@+id/txtCansLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/txtLastDispensed"
+                    android:layout_below="@+id/txtDrinkName"
+                    android:layout_toLeftOf="@+id/lblCanSplit"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:text="@string/cans_Left" >
+
+
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblCanSplit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/txtDrinkName"
+                    android:layout_toLeftOf="@+id/txtCansMax"
+                    android:text="/"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/txtCansMax"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/lblCanSplit"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:text="@string/cans_Max" />
+
+                <EditText
+                    android:id="@+id/txtLastDispensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtCansLeft"
+                    android:layout_toRightOf="@+id/lblLastDispensed"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:text="@string/last_Dispensed" />
+
+                <EditText
+                    android:id="@+id/txtLastRefilled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/txtLastDispensed"
+                    android:layout_below="@+id/txtLastDispensed"
+                    android:layout_alignParentRight="true"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:text="@string/last_Refilled" />
+
+                <TextView
+                    android:id="@+id/lblLastRefilled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/txtLastDispensed"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/text_last_Refilled" />
+
+                <TextView
+                    android:id="@+id/lblLastDispensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/lblDrinkCount"
+                    android:text="@string/text_last_Dispensed" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".10"
+            android:orientation="vertical" >
+            
+            <View
+				 android:layout_width="match_parent"
+				 android:layout_height="1dp"
+				 android:background="@android:color/black" />
+                      
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="40dp" 
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerInParent="true" >
+
+        <Button
+            android:id="@+id/btnDispense"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btnSaveEmailSettings"
+            android:layout_alignParentTop="true"
+            android:text="@string/btn_dispense" />
+
+        <Button
+            android:id="@+id/btnSaveEmailSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/btnSave"
+            android:text="@string/btn_email_Reminder" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/btn_Save" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

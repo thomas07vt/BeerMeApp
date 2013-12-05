@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_settings_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lblEmailSettingsLable"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:text="@string/settings_Email_Settings"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <View
+				 android:layout_width="match_parent"
+				 android:layout_height="1dp"
+				 android:background="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".50"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/txtTO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtSubject"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/txtSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtTO"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/lblSubject"
+                    android:ems="10" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblTO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/txtSubject"
+                    android:layout_alignParentLeft="true"
+                    android:contentDescription="@string/settings_Email_TO"
+                    android:text="@string/settings_Email_TO"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/lblSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtSubject"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/settings_Email_Subject"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <EditText
+                    android:id="@+id/txtBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtSubject"
+                    android:layout_marginTop="23dp"
+                    android:layout_toRightOf="@+id/lblSubject"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/lblBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtBody"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/settings_Email_Body"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".20"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnSaveEmailSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/btn_update_email_settings" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

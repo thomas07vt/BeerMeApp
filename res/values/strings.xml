@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BeerMe</string>
+    <string name="action_SyncDB">Sync Database with Drink Machine</string>
+    <string name="action_Emailsettings">Email Settings</string>
+    <string name="action_UploadDrinkImages">Send Icons to Drink Machine</string>
+    <string name="action_AdminPanel">Connection Settings</string>
+    
+    <string name="intent_ID">0</string>
+    <string name="text_Drink_Name">Drink Name: </string>
+    <string name="drink_Name">DrinkName</string>
+    <string name="text_cans_Left">Cans Left: </string>
+    <string name="cans_Left">12</string>
+    <string name="cans_Max">12</string>
+    <string name="text_last_Refilled">Last Refilled: </string>
+    <string name="last_Refilled">Never</string>
+    <string name="text_last_Dispensed">Last Dispensed: </string>
+    <string name="last_Dispensed">Never</string>
+    <string name="content_description">Images Of Cans</string>
+    <string name="btn_email_Reminder">Send Email</string>
+    <string name="btn_update_email_settings">Save Settings</string>
+    <string name="text_DM_ConnectionSettings">Drink Machine Connection Settings:</string>
+    <string name="btn_dispense">Dispense!</string>
+    <string name="text_can_Position">Can Position: </string>
+    
+    <string name="settings_Username">Username:</string>
+    <string name="settings_Password">Password:</string>
+    <string name="settings_IP">IP:</string>
+    <string name="settings_Port">MySQL Port:</string>
+    
+    <string name="settings_Email_Settings">Set Email Settings:</string>
+    <string name="settings_Email_TO">To:</string>
+    <string name="settings_Email_Subject">Subject:</string>
+    <string name="settings_Email_Body">Body:</string>
+    
+    
+    <string name="aPanel_Header">Manually Edit Drink Info</string>
+    <string name="btn_Save">Save</string>
+    <string-array name="DrinkPosition">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+
+</resources>

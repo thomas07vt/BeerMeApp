@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/admin_panel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lblEmailSettingsLable"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:text="@string/text_DM_ConnectionSettings"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <View
+				 android:layout_width="match_parent"
+				 android:layout_height="1dp"
+				 android:background="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".50"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/lblSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtPassword"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/settings_Password"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/lblBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtIP"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/settings_IP"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <EditText
+                    android:id="@+id/txtUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/lblTO"
+                    android:ems="10"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtUsername"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtUsername"
+                    android:layout_marginTop="7dp"
+                    android:ems="10" >
+
+                </EditText>
+
+                <EditText
+                    android:id="@+id/txtIP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtPassword"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/lblSubject"
+                    android:layout_marginTop="7dp"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/lblTO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/txtPassword"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/settings_Username"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <EditText
+                    android:id="@+id/txtPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtIP"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtIP"
+                    android:layout_marginTop="7dp"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/lblPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtPort"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/settings_Port"
+                    android:textSize="18sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".20"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnSaveCONNSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/btn_update_email_settings" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
